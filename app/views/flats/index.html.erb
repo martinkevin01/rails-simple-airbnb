@@ -1,0 +1,21 @@
+<div class='container'>
+  <div class='row'>
+  <ul class="list-unstyled d-flex justify-content-between">
+   <% @flats.each do |flat| %>
+<li>
+    <div class = 'cards' style="height: 170px; width: 350px">
+      <div class = 'info rounded p-3'  style="background-color: #F5F7F8;">
+      <h3><%= flat.name %></h3>
+      <p><%= flat.address %></p>
+      <span><i class="fa-solid fa-user"></i><%= flat.number_of_guests %></span>
+      <span><i class="fa-solid fa-euro-sign"></i> <%= flat.price_per_night %></span>
+      </div>
+      <div class = 'details'>
+      <%= link_to "More Infos", flats_path(@flats) %>
+      </div>
+    </div>
+    <% end %>
+    </li>
+</ul>
+  </div>
+</div>
